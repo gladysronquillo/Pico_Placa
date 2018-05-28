@@ -14,3 +14,4 @@ target/
 .project
 *.MF
 *.properties
+/build/

@@ -21,24 +21,35 @@
 		<h:form>
 			<div class="row">
 				<br />
-				<h:outputLabel class="col-md-2" for="number"
-					value="License plate number:" />
-				<p:inputText id="number" required="true" />
+				<p:messages class="col-md-5" autoUpdate="true" showDetail="true" />
 			</div>
 			<div class="row">
 				<br />
-				<h:outputLabel class="col-md-2" for="date" value="Date:" />
-				<p:inputMask id="date" required="true" value="" mask="99/99/9999"/>
+				<h:outputLabel class="col-md-2" for="number"
+					value="License plate number:" />
+				<p:inputText id="number" name="number" required="true"
+					value="#{evaluadorPlaca.matricula.placa}" title="License plate number" requiredMessage="Campo License plate number Requerido" />
+				<p:message for="number" />
+			</div>
+			<div class="row">
+				<br />
+				<h:outputLabel  class="col-md-2" for="date" value="Date:" />
+				<p:inputMask id="date" name="date" required="true" title="Date"
+					value="#{evaluadorPlaca.matricula.fecha}" mask="99-99-9999" requiredMessage="Campo Date Requerido" />
+				<p:message for="date" />
 			</div>
 			<div class="row">
 				<br />
 				<h:outputLabel class="col-md-2" for="time" value="Time:" />
-				<p:inputMask id="time" required="true" value="" mask="99:99"/>
+				<p:inputMask id="time" name="time" required="true" title="Time"
+					value="#{evaluadorPlaca.matricula.hora}" mask="99:99" requiredMessage="Campo Time Requerido" />
+				<p:message for="time" />
 			</div>
 			<div class="row">
 				<br />
 				<p:commandButton class="col-md-offset-2 btn btn-success"
-					value="Validate"></p:commandButton>
+					value="Validate"
+					action="#{evaluadorPlaca.probar(evaluadorPlaca.matricula)}"></p:commandButton>
 			</div>
 		</h:form>
 	</div>
