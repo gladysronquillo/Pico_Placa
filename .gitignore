@@ -12,6 +12,5 @@ target/
 .eclipse
 .classpath
 .project
-.settings/
 *.MF
 *.properties
