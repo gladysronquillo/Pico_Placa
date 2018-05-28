@@ -6,9 +6,41 @@
 	xmlns:p="http://primefaces.org/ui">
 
 <h:head>
-	<title>kodigo</title>
-
+	<title>Pico Placa Predictor</title>
+	<h:outputStylesheet name="bootstrap/css/bootstrap.css"></h:outputStylesheet>
+	<h:outputStylesheet name="bootstrap/css/bootstrap.min.css"></h:outputStylesheet>
+	<h:outputScript name="bootstrap/js/bootstrap.js" />
+	<h:outputScript name="bootstrap/js/bootstrap.min.js" />
 </h:head>
-<p:commandButton value="aceptar"> </p:commandButton>
-
+<body id="principal">
+	<div
+		class="container-fluid col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-4 main">
+		<div class="row">
+			<h1>PICO Y PLACA PREDICTOR</h1>
+		</div>
+		<h:form>
+			<div class="row">
+				<br />
+				<h:outputLabel class="col-md-2" for="number"
+					value="License plate number:" />
+				<p:inputText id="number" required="true" />
+			</div>
+			<div class="row">
+				<br />
+				<h:outputLabel class="col-md-2" for="date" value="Date:" />
+				<p:inputMask id="date" required="true" value="" mask="99/99/9999"/>
+			</div>
+			<div class="row">
+				<br />
+				<h:outputLabel class="col-md-2" for="time" value="Time:" />
+				<p:inputMask id="time" required="true" value="" mask="99:99"/>
+			</div>
+			<div class="row">
+				<br />
+				<p:commandButton class="col-md-offset-2 btn btn-success"
+					value="Validate"></p:commandButton>
+			</div>
+		</h:form>
+	</div>
+</body>
 </html>
