@@ -1,0 +1,17 @@
+target/
+/target
+/target/
+*.releaseBackup
+*.class
+*.jar
+*.war
+*.ear
+*.logs
+*.iml
+.idea/
+.eclipse
+.classpath
+.project
+.settings/
+*.MF
+*.properties
